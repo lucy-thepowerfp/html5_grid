@@ -41,6 +41,7 @@
 
 html{
   height: 100%;
+  padding: 4vh;
   background-color: white;
 }
 
@@ -51,10 +52,106 @@ body{
   border-radius: 8vh;
   background-color: var(--primary-color);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  
+  gap: var(--spacing);
+  
 }
 
-h1{
-  color: white;
+
+header{
+  color: var(--primary-color);
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background-color: var(--blue-color);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+header > h1 {
+  text-transform: uppercase;
+  grid-row: 1/2;
+  padding: 2vh;
+  text-align: center;
+  /* font-size: 2.5vh; */
+}
+
+header > p{
+  align-self: center;
+  grid-row: 2/3;
+  text-align: justify;
+  padding: 2vh;
+  /* font-size: 1.5vh; */
+}
+
+.school{
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.student{
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+main{
+  grid-column: 2/3;
+  grid-row: 2/3;
+  color: var(--blue-color);
+  border: var(--border);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-transform: uppercase;
+  
+}
+
+main > h2 {
+  margin: 1vh;
+  text-align: center;
+}
+
+
+.time{
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.alumni{
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+footer{
+  grid-column: 2/4;
+  grid-row: 3/3;
+  background-color: var(--orange-color);
+}
+
+footer > h3{
+  color: var(--primary-color);
+  padding: 2vh;
+}
+
+footer > p {
+  color: var(--primary-color);
+  padding: 2vh;
+  padding-top: 1vh;
+  margin-right: 2vh;
+}
+
+footer > button {
+  height: 6vh;
+  width: 9vw;
+  margin: 4vh;
+  margin-top: 0vh;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  box-shadow: none;
+  border: none;
 }
