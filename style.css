@@ -159,7 +159,7 @@ footer > button {
   }
 }
 
-@media screen and (max-width: 725px) {
+@media screen and (max-width: 730px) {
   body {
     grid-template-areas:
       "header"
